@@ -1,5 +1,5 @@
 <?php 
-
+//$pathToBlog = home_url().'\index.php\blog';
 function mywebsite_setup() {
 
 	/*
@@ -73,7 +73,29 @@ function mywebsite_setup() {
 
 add_action( 'after_setup_theme', 'mywebsite_setup' );
 
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function mywebsite_widgets_init() {
 
+    register_sidebar( array(
+        'name'          => 'Home right sidebar',
+        'id'            => 'home_right_1',
+        'before_widget' => '<div class="widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>',
+    ) );
+
+}
+add_action( 'widgets_init', 'mywebsite_widgets_init' );
+
+
+function register_my_menu() {
+  register_nav_menu('header-menu',__( 'My Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
 
 
 function mywebsite_scripts_with_jquery()
@@ -96,7 +118,7 @@ function mywebsite_scripts_with_jquery()
            wp_enqueue_script( 'landingPage-js', get_template_directory_uri() . '/js/landingPage.js',array('jquery','google-js'), '1.0.0', true);           
 
            //if it is the post page (blog)
-        }elseif (is_home()) {
+        }elseif (is_home() || is_category() || is_tag()) {
         	wp_enqueue_style( "blog-css",get_template_directory_uri() . '/css/blog.css' );            
         }elseif (is_single() )
         {
@@ -194,7 +216,7 @@ endif;
  */
 function mywebsite_breadcrumbs()
 {
-    $home      = __('Home', 'mywebsite'); // text for the 'Home' link
+    $home      = __('Blog', 'mywebsite'); // text for the 'Home' link
     $before    = '<li class="active">'; // tag before the current crumb
     $sep       = '';//'<span class="divider">/</span>';
     $after     = '</li>'; // tag after the current crumb
@@ -204,7 +226,8 @@ function mywebsite_breadcrumbs()
         echo '<ul class="breadcrumb">';
 
         global $post;
-        $homeLink = home_url();
+        $homeLink = home_url().'\index.php\blog';
+        //$homeLink = $pathToBlog;
             echo '<li><a href="' . $homeLink . '">' . $home . '</a> '.$sep. '</li> ';
             if (is_category()) {
                 global $wp_query;

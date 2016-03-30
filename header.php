@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="A software geek personal website">
+    <meta name="author" content="Masoud Ahmadi">
 
-    <title>Masoud</title>
+    <title>Masoud's</title>
 
     
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
@@ -43,22 +43,33 @@
             
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <?php wp_list_pages(array('title_li' => '')); ?>
-                    <!--<li>
-                        <a class="page-scroll" href="#about">About</a>
+                    <?php //wp_list_pages(array('title_li' => '')); 
+                          //wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
+                    ?>
+                    <?php if (is_page( 'Home' )) : ?>
+                        <li>
+                            <a class="page-scroll" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#profile">Profile</a>
+                        </li>
+                    <?php else : ?>
+                        <li>
+                            <a class="page-scroll" href="<?php echo site_url(); ?>#about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="<?php echo site_url(); ?>#profile">Profile</a>
+                        </li>
+                    <?php endif; ?>
+                    <li>
+                        <a class="page-scroll" href="<?php echo site_url(); ?>/index.php/blog">Blog</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#profile">Profile</a>
+                        <a class="page-scroll" href="<?php echo site_url(); ?>/index.php/gallery">Gallery</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="blog.html">Blog</a>
+                        <a class="page-scroll" href="<?php echo site_url(); ?>/index.php/contact">Contact</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="gallery.html">Gallery</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="contact.html">Contact</a>
-                    </li> -->
                 </ul>
             </div>
             

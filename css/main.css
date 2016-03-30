@@ -7,10 +7,12 @@ body {
 body {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
     background-color: #202020;
-    color: rgba(255, 255, 255, 0.5);
+    /*color: rgba(255, 255, 255, 0.5);*/
+    color:#e6e6e6;
 }
 h1, h2, h3{
-    color: #9eb4ba;
+    /*color: #9eb4ba;*/
+    color:#c8eaf3;
 }
 
 
@@ -61,10 +63,10 @@ h1, h2, h3{
 
 .well{
     background: none;
-    color: white;
+    /*color: white; */
 }
 .well a{
-    color: white;
+    color: #9BB5B7;
 }
 
 .dFooter{
@@ -72,6 +74,24 @@ h1, h2, h3{
     background: transparent;
     border-top: 1px solid white;
 }
+
+.widget > ul
+{
+    padding-left: 0;
+    list-style: none;
+}
+
+.widget > ul > li
+{
+    margin-bottom: 2px;
+    margin-left: 10px;
+}
+
+.widget > ul > li > a
+{
+    color: #9BB5B7;
+}
+    
 
 a:hover,
 a:focus {
