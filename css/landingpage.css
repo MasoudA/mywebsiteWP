@@ -1,0 +1,166 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../img/header.gif);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+
+
+@media(min-width:400px) {
+    header {
+        min-height: 100%;
+}
+
+header .header-content {
+    position: absolute;
+    top: 32%;
+    padding: 0 50px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+section {
+    margin: 5px;
+    margin-bottom: 60px;
+    padding: 48px;
+}
+
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #eb3812;
+}
+
+#findMore{
+    display: block;
+    margin: 10px auto;
+    color: #ffffff;
+    width: 382px;
+    height: 50px;
+    padding: 5px;
+    text-align: -webkit-center;
+    -webkit-transition: -webkit-transform 2s, opacity 2s, background 2s, width 2s, height 2s;
+}
+
+#findMore .btn{
+    -webkit-border-radius:10px;
+    width: 140; 
+    background: white;
+    color: blue;
+    margin-top:2px;
+}
+
+
+#findMore .btn:hover{
+    -webkit-transform:scale(2) rotate(360deg);
+    opacity: 1;
+    background: #1ec7e6;
+}
+
+#about{
+    padding: 10px;
+}
+
+#mePic{
+    max-width: 350px;
+    max-height: 360px;
+    margin: 10px;
+}
+
+
+.skill-title{
+    font-weight: 200px;   
+    padding-top: 8px;
+}
+.skill-bar{
+    border: 1px solid white;
+    border-style: groove;
+    border-radius: 6px;
+    width: 100%;
+    height: 15px;
+    display: block;
+    margin: 10px;
+    padding: 0px;
+
+}
+
+.skill-level{
+    background-color: white;
+    height: 13px;
+    border-radius: 3px;
+}
+
+#my-fixed-pic {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 200px;
+  max-height: 300px;
+  border: 1px solid white;
+  overflow: hidden;
+  display: none;
+
+}
+
+#googleMap{
+    width: 500px;
+    height: 230px;
+}
+
+.flare{
+    margin-bottom: 10px;
+}
+
+.flare-tag-cp
+{
+    width: 208px;
+    height: 65px;
+    background: white;
+    border: 3px solid #FF9900;
+    font-size: 13px;
+}
+.flare-tag-cp > a
+{
+    color: #333;
+}
+
+.flare-tag-cp>a>img
+{
+    border-width: 0px;
+    width: 100%;
+    height: 50%;
+}
+
+.flare-tag-ld
+{
+    width: 208px;
+    height: 65px;
+    background-color: white;
+    padding: 8px;
+}
