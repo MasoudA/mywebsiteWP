@@ -45,6 +45,10 @@ header .header-content {
     transform: translateY(-50%);
 }
 
+header .header-content-inner > p
+{
+    text-align: center;
+}
 section {
     margin: 5px;
     margin-bottom: 60px;
